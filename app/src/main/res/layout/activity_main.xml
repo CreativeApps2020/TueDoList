@@ -1,178 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+    <RelativeLayout android:id="@+id/listBreakfast"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/cappuccino"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="10dp">
+            android:src="@drawable/cappuccino"
+            android:scaleType="fitXY"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <EditText android:id="@+id/userInput"
-                    android:layout_width="0dp"
-                    android:layout_weight="4"
-                    android:layout_height="wrap_content"
-                    android:inputType="textAutoComplete" />
-
-                <Button android:id="@+id/addNewList"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="false"
-                    android:text="ADD TueDo List"
-                    android:onClick="changeTueDoListName" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp" >
-
-                <TextView android:id="@+id/nameOfList1"
-                    android:layout_width="0dp"
-                    android:layout_weight="4"
-                    android:layout_height="wrap_content"
-                    android:text="List1" />
-
-                <Button android:id="@+id/deleteList1"
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:layout_height="wrap_content"
-                    android:text="Delete" />
-            </LinearLayout>
-
-
-        <RelativeLayout android:id="@+id/list2"
+        <TextView
+            android:id="@+id/breakfast"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:textColor="#fff"
+            android:padding="30dp"
+            android:textSize="30sp"
+            android:background="#90000000"
+            android:layout_alignBottom="@id/cappuccino"/>
 
-            <ImageView
-                android:id="@+id/cappuccino"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/cappuccino"
-                android:scaleType="fitXY"/>
+    </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp"
-                android:layout_centerVertical="false"
-                android:layout_centerHorizontal="false"
-                android:layout_alignBottom="@id/cappuccino"
-                android:background="#90000000">
+    <RelativeLayout android:id="@+id/listLunch"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp">
 
-                <TextView
-                    android:id="@+id/nameOfList2"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    android:text="List2"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#fff"
-                    android:padding="30dp"
-                    />
-
-                <Button android:id="@+id/deleteList2"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Delete" />
-            </LinearLayout>
-        </RelativeLayout>
-
-        <RelativeLayout android:id="@+id/list3"
+        <ImageView
+            android:id="@+id/salad"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="10dp">
+            android:layout_height="match_parent"
+            android:src="@drawable/lunch"
+            android:scaleType="fitXY" />
 
-            <ImageView
-                android:id="@+id/lunch"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/lunch"
-                android:scaleType="fitXY"
-                />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp"
-                android:layout_alignBottom="@id/lunch"
-                android:background="#90000000">
-
-                <TextView
-                    android:id="@+id/nameOfList3"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    android:text="List3"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#fff"
-                    android:padding="30dp"
-                    />
-
-                <Button android:id="@+id/deleteList3"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Delete" />
-            </LinearLayout>
-        </RelativeLayout>
-
-
-        <RelativeLayout android:id="@+id/list4"
+        <TextView
+            android:id="@+id/lunch"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="10dp">
+            android:layout_height="wrap_content"
+            android:text="Lunch"
+            android:textColor="#fff"
+            android:padding="30dp"
+            android:textSize="30sp"
+            android:background="#90000000"
+            android:layout_alignBottom="@id/salad" />
 
-            <ImageView
-                android:id="@+id/dinner"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/dinner"
-                android:scaleType="fitXY"
-                />
+    </RelativeLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="0dp"
-                android:layout_alignBottom="@id/dinner"
-                android:background="#90000000">
+    <RelativeLayout android:id="@+id/listDinner"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp">
 
-                <TextView
-                    android:id="@+id/nameOfList4"
-                    android:layout_width="0dp"
-                    android:layout_weight="3"
-                    android:layout_height="wrap_content"
-                    android:text="List4"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#fff"
-                    android:padding="30dp"
-                    />
+        <ImageView
+            android:id="@+id/candleTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dinner"
+            android:scaleType="fitXY" />
 
-                <Button android:id="@+id/deleteList4"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:text="Delete"
-                    android:background="#70000000"
-                    android:textColor="#777"/>
-            </LinearLayout>
-        </RelativeLayout>
+        <TextView
+            android:id="@+id/dinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:textColor="#fff"
+            android:padding="30dp"
+            android:textSize="30sp"
+            android:background="#90000000"
+            android:layout_alignBottom="@id/candleTable" />
+    </RelativeLayout>
 
-    </LinearLayout>
-</androidx.core.widget.NestedScrollView>
+</LinearLayout>
